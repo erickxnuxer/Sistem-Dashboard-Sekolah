@@ -180,11 +180,11 @@ $siswa = mysqli_num_rows($query4);
                                     <div class="list-jadwal d-flex flex-row align-items-center justify-content-between mb-4">
 
                                         <div class="jadwal-content d-flex justify-content-between align-items-center">
-                                            <h5 class="black-pel mr-2" style="color: #03a9f4;">PKN</h5>
+                                            <h5 class="black-pel mr-2" style="color: #03a9f4;">XI TKJ 3</h5>
 
                                             <p class="garis mr-2">|</p>
 
-                                            <h6 class="black-pel mr-4">Suvento</h6>
+                                            <h6 class="black-pel mr-4">PKN</h6>
 
                                             <p class="time mr-2">09:00 - 10:00</p>
                                         </div>
@@ -198,11 +198,11 @@ $siswa = mysqli_num_rows($query4);
                                     <div class="list-jadwal d-flex flex-row align-items-center justify-content-between">
 
                                         <div class="jadwal-content d-flex justify-content-between align-items-center">
-                                            <h5 class="black-pel mr-2" style="color: #03a9f4;">Matematika</h5>
+                                            <h5 class="black-pel mr-2" style="color: #03a9f4;">X TKJ 3</h5>
 
                                             <p class="garis mr-2">|</p>
 
-                                            <h6 class="black-pel mr-4">Sondang Elisabeth</h6>
+                                            <h6 class="black-pel mr-4">Matematika</h6>
 
                                             <p class="time mr-2">11:00 - 12:00</p>
                                         </div>
