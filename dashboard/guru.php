@@ -265,4 +265,8 @@ $siswa = mysqli_num_rows($query4);
     <script src="js/sb-admin-2.min.js"></script>
     
 </body>
+<<<<<<< HEAD
 </html>
+=======
+</html>
+>>>>>>> 0f49d8cfff69f19bd6a59ce759ef49ceeb19a41a
