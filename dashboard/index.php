@@ -45,6 +45,9 @@ $siswa = mysqli_num_rows($query4);
     <script src="js/script-tbhari.js"></script>
     <script src="js/script-tbkelas.js"></script>
     <script src="js/script-tbjam.js"></script>
+    <script src="js/script-tbmapel.js"></script>
+    <script src="js/script-tbwaktutidaktersedia.js"></script>
+    <script src="js/script-tbpenjadwalan.js"></script>
 
 </head>
 
@@ -102,7 +105,7 @@ $siswa = mysqli_num_rows($query4);
                         <div class="collapse-divider"></div>
                         <h6 class="collapse-header">Data Lain:</h6>
 
-                        <a class="collapse-item" href="index.php">
+                        <a class="collapse-item" onclick="loadTbmapel()">
                             <i class="fas fa-fw fa-book"></i> Pelajaran
                         </a>
 
@@ -118,7 +121,7 @@ $siswa = mysqli_num_rows($query4);
                             <i class="fas fa-fw fa-calendar"></i> Hari
                         </a>
 
-                        <a class="collapse-item" href="index.php">
+                        <a class="collapse-item" onclick="loadTbwaktutidaktersedia()">
                             <i class="fas fa-fw fa-ban"></i> Waktu tidak bersedia
                         </a>
 
@@ -136,7 +139,7 @@ $siswa = mysqli_num_rows($query4);
                 <div id="collapsetable" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Proses Data :</h6>
-                        <a class="collapse-item"><i class="fas fa-fw fa-calendar-minus"></i> Penjadwalan</a>
+                        <a class="collapse-item" onclick="loadTbpenjadwalan()"><i class="fas fa-fw fa-calendar-minus"></i> Penjadwalan</a>
                     </div>
                 </div>
             </li>
@@ -152,7 +155,7 @@ $siswa = mysqli_num_rows($query4);
 
             <div class="container my-auto" style="color: white;margin-bottom:4% !important">
                 <div class="copyright text-center my-auto">
-                    <span>Copyright &copy; SMK Immanuel Pontianak <?= date("Y") ?></span>
+                    <span>Copyright &copy; <?= date("Y") ?></span>
                 </div>
             </div>
 
@@ -421,6 +424,21 @@ function loadTbstaff() {
     xhttp.send();
 }
 
+function loadTbmapel() {
+    var url = "data/tbmapel/mapel.php";
+    var xhttp;
+
+    xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+            data = this.responseText;
+            document.getElementById("data").innerHTML = data;
+        }
+    };
+    xhttp.open("GET", url, true);
+    xhttp.send();
+}
+
 
 function loadTbguru() {
     var url = "data/tbguru/guru.php";
@@ -485,6 +503,36 @@ function loadTbkelas() {
 
 function loadTbjam() {
     var url = "data/tbjam/jam.php";
+    var xhttp;
+
+    xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+            data = this.responseText;
+            document.getElementById("data").innerHTML = data;
+        }
+    };
+    xhttp.open("GET", url, true);
+    xhttp.send();
+}
+
+function loadTbwaktutidaktersedia() {
+    var url = "data/tbwaktutidaktersedia/waktu.php";
+    var xhttp;
+
+    xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+            data = this.responseText;
+            document.getElementById("data").innerHTML = data;
+        }
+    };
+    xhttp.open("GET", url, true);
+    xhttp.send();
+}
+
+function loadTbpenjadwalan() {
+    var url = "data/tbpenjadwalan/jadwal.php";
     var xhttp;
 
     xhttp = new XMLHttpRequest();
